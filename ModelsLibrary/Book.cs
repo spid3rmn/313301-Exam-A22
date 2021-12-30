@@ -1,16 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace ModelsLibrary
 {
     class Book
     {
+        [Key]
         public int ISBN { get; set; }
+        [Required, MaxLength(40)]
         public string Title { get; set; }
         public int PublicationYear { get; set; }
         public int NumOfPages { get; set; }
         public string Genre { get; set; }
+        [Required]
         public int AuthorId { get; set; }
     }
 }
