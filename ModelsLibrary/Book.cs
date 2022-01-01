@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ModelsLibrary
 {
-    class Book
+    public class Book
     {
         [Key]
         public int ISBN { get; set; }
